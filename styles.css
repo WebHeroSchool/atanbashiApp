@@ -1,7 +1,38 @@
-.header {
+.header__logo .header__text .header__nav {
+  display: inline-block;
+}
+
+.header__logo .header__text {
+  float: left;
+}
+
+.header__nav {
+  float: right;
+  line-height: 32px;
+}
+
+.header .main {
   font-family: 'Roboto', sans-serif;
+}
+
+.header__link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header__text {
+  font-family: 'PT Serif', serif;
 }
 
 .main__title {
   font-family: 'PT Serif', serif;
+}
+
+.main {
+  display: flex;
+   justify-content: center;
+}
+
+.main__wrap .main__img {
+
 }
