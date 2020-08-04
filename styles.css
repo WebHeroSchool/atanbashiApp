@@ -38,6 +38,11 @@
   color: #000000;
 }
 
+.header__link:hover {
+  background: rgba(100, 150, 220, 0.5);
+  color: #db7093;
+  box-shadow: inset 2px 2px 2px 3px pink;
+}
 .header__text {
   font-family: 'PT Serif', serif;
   font-style: normal;
@@ -73,6 +78,7 @@
   background: #0056EC;
   border-radius: 4px;
   color: #FFFFFF;
+  padding: 20px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
