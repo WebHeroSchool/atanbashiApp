@@ -51,6 +51,13 @@
   line-height: 32px;
 }
 
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+
 .main__title {
   font-family: 'PT Serif', serif;
   font-style: normal;
@@ -62,6 +69,7 @@
 
 .main__text {
   max-width: 455px;
+  margin-bottom: 40px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -84,9 +92,29 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+  transition: 0.5s;
 }
-.main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
- }
+
+.main__btn:hover {
+  background-color: red;
+  color: black;
+  font-size: 200%;
+  }
+
+@media (max-width: 1366px;) {
+  .header__link {
+    font-size: 14px;
+  }
+  .main__title {
+    font-size: 50px;
+  }
+  .main__text {
+    font-size: 18px;
+  }
+  .main__btn {
+    font-size: 14px;
+  }
+  .main__img {
+    width: 66.7%;
+  }
+}
