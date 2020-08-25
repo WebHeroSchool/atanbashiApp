@@ -22,6 +22,10 @@ body {
   padding: 0 15px;
 }
 
+.header__nav label, #hamburger {
+  display: none;
+}
+
 .header__logo {
   display: flex;
   justify-content: center;
@@ -66,86 +70,6 @@ body {
   font-size: 24px;
   line-height: 32px;
 }
-
-/* burger start */
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.header .header__list {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
-
-.header .header-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .header-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.header .header-icon .navicon:before,
-.header .header-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .header-icon .navicon:before {
-  top: 5px;
-}
-
-.header .header-icon .navicon:after {
-  top: -5px;
-}
-
-.header .header__btn {
-  display: none;
-}
-
-.header .header__btn:checked ~ .header__list {
-  max-height: 240px;
-}
-
-.header .header-btn:checked ~ .header-icon .navicon {
-  background: transparent;
-}
-
-.header .header-btn:checked ~ .header-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .header-btn:checked ~ .header-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-
-.header .header-btn:checked ~ .header-icon:not(.steps) .navicon:before,
-.header .header-btn:checked ~ .header-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-/*burger end */
 
 /* header styles end */
 
@@ -288,16 +212,34 @@ body {
 
 @media (max-width: 700px) {
 
-  .header__container {
-    display: block;
-  }
-
-  .header__container {
-  overflow: visible;
-  }
-
   .header__text {
       display: none;
+  }
+
+  .header__nav label {
+    display: inline-block;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  label {
+    color: #0056EC;
+    width: 25px;
+    height: 17px;
+  }
+
+  .header__list a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%
+  }
+  .header__list { display: none; }
+  .header__nav input:checked ~ .header__list {
+    display: block;
+   }
+  .header__nav input:checked ~ .main {
+    display: none;
   }
 
   .header__link_line {
