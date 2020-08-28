@@ -291,6 +291,10 @@ body {
     user-select: none;
   }
 
+  .navicon {
+    background-color: #0056EC;
+  }
+  
   .header .header__icon .navicon {
     background: #333;
     display: block;
@@ -326,7 +330,8 @@ body {
   }
 
   .header .header__btn:checked ~ .header__list {
-    max-height: 240px;
+    min-height: 100vh;
+    display: block;
   }
 
   .header .header__btn:checked ~ .header__icon .navicon {
@@ -344,6 +349,11 @@ body {
   .header .header__btn:checked ~ .header__icon:not(.steps) .navicon:before,
   .header .header__btn:checked ~ .header__icon:not(.steps) .navicon:after {
     top: 0;
+  }
+
+  .header .header__btn:checked ~ .header__link {
+    font-size: 30px;
+    line-height: 35px;
   }
 
   .main {
